@@ -4,7 +4,7 @@ buildscript {
     }
     repositories {
         mavenCentral() // 메이븐센트럴은 본인이 만든 라이브러리를 업로드 하려면 많은과정이 필요하다
-        jcenter()
+        jcenter() //라이브러리를 보다 편하게 사용 할 수 있다.
     }
     dependencies {
         classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
