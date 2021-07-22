@@ -1,0 +1,32 @@
+buildscript {
+    ext {
+        springBootVersion = '2.1.7.RELEASE' //스프링부트버전을 전역변수로 설정해서 그 값으로 2.1.7 버전을 가져오겠다는 뜻
+    }
+    repositories {
+        mavenCentral() // 메이븐센트럴은 본인이 만든 라이브러리를 업로드 하려면 많은과정이 필요하다
+        jcenter()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management' //스프링 부트를 사용하기 위한 필수 플러그인
+
+group 'myproject'
+version '1.0-SNAPSHOT'
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile('org.springframework.boot:spring-boot-starter-web')
+    testCompile('org.springframework.boot:spring-boot-starter-test')
+}
+
+
